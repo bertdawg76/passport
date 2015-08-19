@@ -1,7 +1,7 @@
 'use strict';
 
 var User = require('../models/users.js');
-var Product = require('../models/products.js');
+//var Product = require('../models/products.js');
 
 var create = function(req, res) {
   User.create(req.body, function(err, result) {

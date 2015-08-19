@@ -1,5 +1,5 @@
 'use strict';
 
-app.controller('productsCtrl', ['$scope', 'products', 'productService', function($scope, products, productService) {
+app.controller('productsCtrl', ['$scope', 'productService', function($scope, productService) {
 
 }]);
