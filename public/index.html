@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nodeAuth">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="E-commerce application">
+    <meta name="author" content="Philipp Schulte">
+
+    <title>NodeAuth</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Static navbar -->
+    <div ng-include="'./views/nav.html'"></div>
+
+    <!-- Routing -->
+    <ng-view></ng-view>
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <!-- Bootstrap Library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <!-- Angular Core Library -->
+    <script src="https://code.angularjs.org/1.4.4/angular.js"></script>
+    <!-- Angular Route Library -->
+    <script src="https://code.angularjs.org/1.4.4/angular-route.js"></script>
+    <!-- Angular Module -->
+    <script src="./js/app.js"></script>
+    <!-- Angular Controller -->
+    <script src="./js/controllers/homeCtrl.js"></script>
+    <script src="./js/controllers/loginCtrl.js"></script>
+    <script src="./js/controllers/signupCtrl.js"></script>
+    <script src="./js/controllers/productsCtrl.js"></script>
+    <!-- Angular Services -->
+    <script src="./js/services/userService.js"></script>
+  </body>
+</html>
