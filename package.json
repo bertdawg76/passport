@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/philippschulte/passport/issues"
   },
-  "homepage": "https://github.com/philippschulte/passport"
+  "homepage": "https://github.com/philippschulte/passport",
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.13.3",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "mongoose": "^4.1.3",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0",
+    "q": "^1.4.1"
+  }
 }
