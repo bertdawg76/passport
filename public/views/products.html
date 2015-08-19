@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="page-header">
+    <h2>Products</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-10 col-xs-10">
+      <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+        <input type="text"  class="form-control" ng-model="product" placeholder="Filter the products by name, brand, category, description or price" aria-describedby="sizing-addon2">
+      </div>    
+    </div>
+    <div class="col-md-2 col-xs-2">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal">Add product</button>    
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Add new product here</h4>
+        </div>
+        <div class="modal-body">
+          <form ng-submit="addProduct()">
+            <p ng-show="error" class="text-danger">{{ error }}</p>
+            <input type="text" placeholder="Name" class="form-control" ng-model="product.article" required><br>
+            <input type="text" placeholder="Category" class="form-control" ng-model="product.category" required><br>
+            <input type="text" placeholder="Brand" class="form-control" ng-model="product.brand" required><br>
+            <input type="text" placeholder="Description" class="form-control" ng-model="product.description" required><br>
+            <input type="number" placeholder="Price" class="form-control" ng-model="product.price" required><br>
+            <input type="submit" class="btn btn-info" value="Add">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div ng-repeat="product in products | filter: product" class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{product.article}}</h3>
+    </div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">Brand: {{product.brand}}</li>
+        <li class="list-group-item">Category: {{product.category}}</li>
+        <li class="list-group-item">Description: {{product.description}}</li>
+        <li class="list-group-item">Price: <strong>{{product.price | currency}}</strong></li>
+      </ul>
+    </div>
+  </div>
+</div>

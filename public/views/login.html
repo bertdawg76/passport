@@ -1,0 +1,13 @@
+<div class="container">   
+  <div class="jumbotron">
+    <div>
+      <h2>Login</h2>
+      <form ng-submit="login()">
+        <p ng-show="error" class="text-danger">{{ error }}</p>
+        <input type="email" placeholder="Email" class="form-control" ng-model="details.email" required><br>
+        <input type="password" placeholder="Password" class="form-control" ng-model="details.password" required><br>
+        <input type="submit" class="btn btn-info" value="Sign In">
+      </form>
+    </div>
+  </div>
+</div>
